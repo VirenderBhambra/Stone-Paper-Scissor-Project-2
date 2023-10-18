@@ -5,6 +5,11 @@ let score = {
     win:0,
     lose:0,
     draw:0,
+    displayScore(){
+        document.querySelector('#win').innerHTML = `Wins: ${score.win}`;
+        document.querySelector('#lose').innerHTML = `Loses: ${score.lose}`;
+        document.querySelector('#draw').innerHTML = `Draw: ${score.draw}`;
+    }
 };
 const onClick = ()=>{
     let randomNumber = Math.round(Math.random()*1000 % 2);
@@ -32,9 +37,7 @@ const onClick = ()=>{
         result.style.fontWeight = 'darkgreen';
         score.win+=1;
     }
-    document.querySelector('#win').innerHTML = `Wins: ${score.win}`;
-    document.querySelector('#lose').innerHTML = `Loses: ${score.lose}`;
-    document.querySelector('#draw').innerHTML = `Draw: ${score.draw}`;
+    score.displayScore();
 };
 
 document.querySelector('.image1').addEventListener('click',onClick);
