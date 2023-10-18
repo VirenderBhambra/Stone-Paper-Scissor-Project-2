@@ -27,3 +27,19 @@ body{
     justify-content: center;
     
 }
+.scoreboard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 20px;
+    text-indent: 20px;
+}
+#win{
+    color: darkgreen;
+}
+#lose{
+    color: rgb(127, 26, 26);
+}
+#draw{
+    color:rgb(77, 71, 71);
+}

@@ -1,7 +1,11 @@
 let clicked = '';
 let arr = ['Rock', 'Paper','Scissor'];
 
-
+let score = {
+    win:0,
+    lose:0,
+    draw:0,
+};
 const onClick = ()=>{
     let randomNumber = Math.round(Math.random()*1000 % 2);
     let compSelected = arr[randomNumber]; 
@@ -12,6 +16,7 @@ const onClick = ()=>{
         result.innerHTML =`<h1> Computer chose : ${compSelected}<br> Match Draw!</h1>` ;
         result.style.color = '#595353';
         result.style.fontWeight = 'bold';
+        score.draw +=1;
     }
     else if((clicked == 'Rock' && compSelected == 'Paper') || (clicked == 'Paper' && compSelected == 'Scissor')
         || clicked == 'Scissor' && compSelected == 'Rock' )
@@ -19,12 +24,17 @@ const onClick = ()=>{
         result.innerHTML =`<h1> Computer chose : ${compSelected}<br> You Lose!</h1>`;
         result.style.color = 'black';
         result.style.fontWeight = 'bold';
+        score.lose+=1;
     }
     else {
         result.innerHTML =`<h1> Computer chose : ${compSelected}<br> You Win!</h1>`;
         result.style.color = '#052f05';
         result.style.fontWeight = 'darkgreen';
+        score.win+=1;
     }
+    document.querySelector('#win').innerHTML = `Wins: ${score.win}`;
+    document.querySelector('#lose').innerHTML = `Loses: ${score.lose}`;
+    document.querySelector('#draw').innerHTML = `Draw: ${score.draw}`;
 };
 
 document.querySelector('.image1').addEventListener('click',onClick);
