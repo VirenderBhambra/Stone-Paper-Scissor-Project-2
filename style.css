@@ -1,0 +1,53 @@
+body{
+    height: 90vh;
+    width:90%;
+    background-color: #4DBBFF;
+}
+.img-holder{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+h1{
+    text-transform: uppercase;
+    color: rgb(24, 24, 101);
+}
+ 
+.name-and-button .btn{
+    
+    margin-left: 130px;
+     
+
+    /* background-color: lightgreen;
+    border-radius: 5px;
+    border: 0px;
+    overflow: hidden; */
+    cursor: pointer; 
+    color: var(--color);
+    transition: 0.25s;
+  
+    &:hover,
+    &:focus { 
+        border-color: var(--hover);
+        color: lightgreen;
+    }
+    background: rgb(29, 129, 29);
+    border: 2px solid green;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    border-radius: 10px;
+} 
+
+.name-and-button .btn:hover,
+.name-and-button .btn:focus {
+
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.img{
+    
+    height:90vh;
+    width: 90vh;
+    object-fit: cover;
+}

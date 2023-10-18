@@ -1,0 +1,29 @@
+body{
+    height: 90vh;
+    width:90%;
+    background-color: #4DBBFF;
+}
+.container{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#stone{
+    padding: 10px 30px;
+}
+#paper{
+    padding: 10px 30px;
+}
+#scissors{
+    padding: 10px 30px;
+}
+
+.header,.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
